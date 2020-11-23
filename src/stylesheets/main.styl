@@ -1,0 +1,106 @@
+body
+  background: #111
+  color: #EEEEEE
+  margin-left: 0
+  padding: 0
+
+h1
+  color: blue
+  text-align: center
+
+@font-face
+  font-family: Poiretone
+  src: url("../fonts/poiretone.woff") format("woff"), url("../fonts/poiretone.woff2") format("woff2")
+
+#header
+  width: 1000px
+  margin-top: 35px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  border-bottom: 5px solid #EEE
+  font-family: Poiretone
+
+#header-title
+  display: block
+  width: 50%
+  height: 64px
+  font-size: 50px
+  user-select: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+#header-title-text a:hover
+  text-decoration: none
+
+#header-title-first-part
+  color: #EEEEEE
+
+#header-title-second-part
+  color: #619CF4
+
+#header-title:hover #header-title-first-part
+  color: #619CF4
+
+#header-title:hover #header-title-second-part
+  color: #EEEEEE
+
+#header-navigation
+  color: #EEE
+  font-size: 1.3em
+  text-align: right
+  width: 45%
+  position: absolute
+  bottom: 5px
+  right: 0
+
+#header-navigation .menu, #header-navigation .menu *
+  margin:0
+  padding:0
+  list-style:none
+
+#header-navigation .menu
+  line-height:1.0
+  text-align: right
+  padding-bottom: 5px
+  position: absolute
+  right: 0
+  bottom: 0
+
+#header-navigation .menu ul li
+  width: 100%
+
+#header-navigation .menu li:hover
+  visibility: inherit
+
+#header-navigation .menu li
+  float: left
+  position: relative
+  margin-left: 15px
+
+#header-navigation .menu a
+  display: block
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+  color: #EEE
+
+#header-navigation .menu a:hover
+  color: #619CF4
+
+#content
+  width: 950px;
+  margin: 15px auto 0;
+
+#footer
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  position: relative;
+  border-top: 5px solid #EEE;
+  padding: 0;
+  text-align: right;
+  color: #EEE;
+  font-family: Poiretone;
