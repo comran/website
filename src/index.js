@@ -10,4 +10,3 @@ require("./fonts/poiretone.woff2")
 
 // Stylesheets
 require("./stylesheets/main.styl")
-

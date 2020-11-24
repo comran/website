@@ -4,9 +4,21 @@ body
   margin-left: 0
   padding: 0
 
-h1
-  color: blue
-  text-align: center
+p, h1, h2, h3, h4, h5, h6
+  color: #EEE;
+
+a
+  color: #619CF4;
+  text-decoration: none;
+
+a:link
+  text-decoration: none;
+
+a:visited
+  text-decoration: none;
+
+a:hover
+  text-decoration: underline;
 
 @font-face
   font-family: Poiretone
@@ -21,6 +33,14 @@ h1
   border-bottom: 5px solid #EEE
   font-family: Poiretone
 
+#header a:active
+  outline: 0;
+  border: 0;
+
+#header a:focus
+  outline: 0;
+  border: 0;
+
 #header-title
   display: block
   width: 50%
@@ -31,7 +51,7 @@ h1
   -moz-user-select: none
   -ms-user-select: none
 
-#header-title-text a:hover
+#header-title a:hover
   text-decoration: none
 
 #header-title-first-part
