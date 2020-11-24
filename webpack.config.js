@@ -1,18 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const fs = require('fs');
 const path = require("path")
 
 let templates = [];
-let dir = 'src/pages';
 
 const getAllFiles = function(dirPath, arrayOfFiles) {
   let files = fs.readdirSync(dirPath)
-
+  
   arrayOfFiles = arrayOfFiles || []
-
+  
   files.forEach(function(file) {
     if (fs.statSync(dirPath + "/" + file).isDirectory()) {
       arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles)
@@ -20,11 +20,12 @@ const getAllFiles = function(dirPath, arrayOfFiles) {
       arrayOfFiles.push(path.join(dirPath.slice(10), file))
     }
   })
-
+  
   return arrayOfFiles
 }
 
-let allPugPages = getAllFiles(dir)
+let pagesDir = 'src/pages';
+let allPugPages = getAllFiles(pagesDir)
 
 allPugPages.forEach(file => {
   if (file.match(/\.pug$/)) {
@@ -33,7 +34,7 @@ allPugPages.forEach(file => {
     
     templates.push(
       new HtmlWebpackPlugin({
-        template: dir + '/' + filename + '.pug',
+        template: pagesDir + '/' + filename + '.pug',
         filename: filename + '.html'
       })
     );
@@ -91,7 +92,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.svg$/,
+        test: /\.(svg|jpg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -107,7 +108,14 @@ module.exports = {
   plugins: [
     ...templates,
     new HtmlWebpackPugPlugin(),
-    new MiniCssExtractPlugin()//,
+    new MiniCssExtractPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "src/images", to: "images" },
+        { from: "src/fonts", to: "fonts" },
+        { from: "src/favicon.ico", to: "favicon.ico" }
+      ]
+    })
     // new CleanWebpackPlugin({
     //   cleanAfterEveryBuildPatterns: 'dist'
     // })

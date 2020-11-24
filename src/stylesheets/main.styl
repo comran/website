@@ -1,28 +1,29 @@
+@font-face
+  font-family: Poiretone
+  src: url("../fonts/poiretone.woff") format("woff"), url("../fonts/poiretone.woff2") format("woff2")
+
 body
   background: #111
   color: #EEEEEE
   margin-left: 0
   padding: 0
+  font-family: Poiretone
 
 p, h1, h2, h3, h4, h5, h6
-  color: #EEE;
+  color: #EEE
 
 a
-  color: #619CF4;
-  text-decoration: none;
+  color: #619CF4
+  text-decoration: none
 
 a:link
-  text-decoration: none;
+  text-decoration: none
 
 a:visited
-  text-decoration: none;
+  text-decoration: none
 
 a:hover
-  text-decoration: underline;
-
-@font-face
-  font-family: Poiretone
-  src: url("../fonts/poiretone.woff") format("woff"), url("../fonts/poiretone.woff2") format("woff2")
+  text-decoration: underline
 
 #header
   width: 1000px
@@ -31,19 +32,20 @@ a:hover
   margin-right: auto
   position: relative
   border-bottom: 5px solid #EEE
-  font-family: Poiretone
 
 #header a:active
-  outline: 0;
-  border: 0;
+  outline: 0
+  border: 0
 
 #header a:focus
-  outline: 0;
-  border: 0;
+  outline: 0
+  border: 0
+
+#header-left
+  width: 50%
 
 #header-title
-  display: block
-  width: 50%
+  display: inline
   height: 64px
   font-size: 50px
   user-select: none
@@ -66,61 +68,92 @@ a:hover
 #header-title:hover #header-title-second-part
   color: #EEEEEE
 
-#header-navigation
-  color: #EEE
-  font-size: 1.3em
+#header-right
   text-align: right
   width: 45%
   position: absolute
   bottom: 5px
   right: 0
 
-#header-navigation .menu, #header-navigation .menu *
-  margin:0
-  padding:0
-  list-style:none
+.menu, .menu *
+  margin: 0
+  padding: 0
+  list-style: none
 
-#header-navigation .menu
+.menu
+  color: #EEE
+  font-size: 1.3em
   line-height:1.0
   text-align: right
   padding-bottom: 5px
+
+#header-left .menu
+  display: inline
+  position: absolute
+  bottom: 0
+
+#header-right .menu
   position: absolute
   right: 0
   bottom: 0
 
-#header-navigation .menu ul li
+.menu ul li
   width: 100%
 
-#header-navigation .menu li:hover
+.menu li:hover
   visibility: inherit
 
-#header-navigation .menu li
+.menu li
   float: left
   position: relative
   margin-left: 15px
 
-#header-navigation .menu a
+.menu a
   display: block
   position: relative
   text-decoration: none
   text-transform: uppercase
   color: #EEE
 
-#header-navigation .menu a:hover
+.menu a:hover
   color: #619CF4
 
 #content
-  width: 950px;
-  margin: 15px auto 0;
+  width: 950px
+  margin: 15px auto 0
 
 #footer
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  position: relative;
-  border-top: 5px solid #EEE;
-  padding: 0;
-  text-align: right;
-  color: #EEE;
-  font-family: Poiretone;
+  width: 1000px
+  margin-left: auto
+  margin-right: auto
+  margin-top: 10px
+  position: relative
+  border-top: 5px solid #EEE
+  padding: 0
+  text-align: right
+  color: #EEE
+
+#article-index
+  font-size: 30px
+
+#article-index
+  list-style: none
+  counter-reset: li -1
+
+#article-index li:before
+  counter-increment: li
+  font-family: helvetica
+  content: "000" counter(li)". "
+
+#article-index li:nth-child(n+11):before
+  content: "00" counter(li)". "
+
+#article-index li:nth-child(n+101):before
+  content: "0" counter(li)". "
+
+#article-index li:nth-child(n+1001):before
+  content: counter(li)". "
+
+.article-image
+  width: calc(100% - 16px)
+  border: 8px solid #FFF
