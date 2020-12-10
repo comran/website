@@ -2,6 +2,67 @@ extends ../../templates/main-layout.pug
 
 block content
   h1.
-    Weather balloon
+    High Altitude Weather balloon
+
+  h2.
+    About The Project
+
+  p.
+    "Watchful Eagle" began as a high school project between me and a couple other students to see whether we could deploy and recover a payload of sensors and video cameras attached to a weather balloon. Funding for this project was sourced through the generous contributions of our 45 backers on Kickstarter, who ultimately allowed us to raise $970 towards funding the supplies that went into making this whole thing possible.
+
+  p.
+    We had a couple goals in mind when we entered this project:
+  
+  ul
+    li.
+      Deploy a collection of sensors into the stratosphere and recover the payload safely
+    li.
+      Capture a continuous video and timelapse of the whole journey
+    li.
+      Relay back a live video feed from the payload that could be viewed during ascent
+
+  p.
+    All-in-all, fundraising began at the end of 2015, development took place between 2015 and 2016, and the final balloon made its ascent during the summer of 2017 after an available launch window was chosen.
 
   img(src="/images/0001-weather-balloon/weather-balloon-apex.jpg" class="article-image")
+
+  h2.
+    Design And Components
+
+  p.
+    The following materials went into making this project possible:
+
+  ul
+    li.
+      Weather balloon (2000 grams) + Helium tank
+    li.
+      Parachute
+    li.
+      #[a(href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/?resellerType=home") Raspberry Pi 3 B+ computer] + #[a(href="https://www.sparkfun.com/products/13717") breakout "wedge" board]
+
+    li.
+      #[a(href="https://www.ravpower.com/products/rp-pb41-26800mah-power-bank") Ravpower 26800mAh power bank]
+    li.
+      #[a(href="https://www.globalstar.com/en-us/products/spot-for-business/spot-trace") SPOT satellite tracking device]
+    li Various sensors interfacing with the Raspberry Pi
+      ul
+        li.
+          #[a(href="https://www.adafruit.com/product/1603") BMP180 barometer]
+        li.
+          #[a(href="https://www.sparkfun.com/products/12909") MS5803-14BA pressure sensor]
+        li.
+          #[a(href="https://www.sparkfun.com/products/9836") Three-axis accelerometer]
+        li.
+          #[a(href="https://www.adafruit.com/product/1746") HMC5883L compass]
+        li.
+          #[a(href="https://www.adafruit.com/product/746") GPS module] + external antenna
+        li.
+          #[a(href="https://www.raspberrypi.org/products/camera-module-v2/") Camera module]
+    li.
+      Long distance analog video #[a(href="https://www.readymaderc.com/products/details/rmrc-900mhz-1500mw*-transmitter-black-edition-intl") transmitter] + #[a(href="https://www.readymaderc.com/products/details/rmrc-900mhz-1-3ghz-receiver-1258-with-rmrc-comtech-tuner") receiver]
+
+  h3.
+    Telemetry Electronics
+
+  p.
+    We developed a custom electronic board and supporting software to record telemetry for this project. The board ended up being a simple collection of sensors mounted to a breakout board, which interfaced with a Raspberry Pi computer via an I2C bus (barometers + accelerometer + compass) and serial connection (GPS).

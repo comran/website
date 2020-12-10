@@ -3,14 +3,14 @@
   src: url("../fonts/poiretone.woff") format("woff"), url("../fonts/poiretone.woff2") format("woff2")
 
 body
-  background: #111
-  color: #EEEEEE
+  background: #EEE
+  color: #111
   margin-left: 0
   padding: 0
-  font-family: Poiretone
+  font-family: Lato
 
 p, h1, h2, h3, h4, h5, h6
-  color: #EEE
+  color: #111
 
 a
   color: #619CF4
@@ -30,8 +30,10 @@ a:hover
   margin-top: 35px
   margin-left: auto
   margin-right: auto
+  padding-bottom: 5px
   position: relative
-  border-bottom: 5px solid #EEE
+  border-bottom: 5px solid #111
+  font-weight: 700
 
 #header a:active
   outline: 0
@@ -44,6 +46,9 @@ a:hover
 #header-left
   width: 50%
 
+#header-left-menu
+  margin-bottom: 10px
+
 #header-title
   display: inline
   height: 64px
@@ -52,12 +57,13 @@ a:hover
   -webkit-user-select: none
   -moz-user-select: none
   -ms-user-select: none
+  font-family: Poiretone
 
 #header-title a:hover
   text-decoration: none
 
 #header-title-first-part
-  color: #EEEEEE
+  color: #111
 
 #header-title-second-part
   color: #619CF4
@@ -66,13 +72,13 @@ a:hover
   color: #619CF4
 
 #header-title:hover #header-title-second-part
-  color: #EEEEEE
+  color: #111
 
 #header-right
   text-align: right
   width: 45%
   position: absolute
-  bottom: 5px
+  bottom: 10px
   right: 0
 
 .menu, .menu *
@@ -81,7 +87,7 @@ a:hover
   list-style: none
 
 .menu
-  color: #EEE
+  color: #111
   font-size: 1.3em
   line-height:1.0
   text-align: right
@@ -113,7 +119,7 @@ a:hover
   position: relative
   text-decoration: none
   text-transform: uppercase
-  color: #EEE
+  color: #111
 
 .menu a:hover
   color: #619CF4
@@ -121,6 +127,25 @@ a:hover
 #content
   width: 950px
   margin: 15px auto 0
+  font-size: 1.5em
+  font-weight: 400
+  line-height: 1.5em
+
+#content h1
+  width: 100%
+
+#content h2
+  color: #EEE
+  background: #111
+  width: 100%
+  padding-left: 8px
+  padding-right: 8px
+  padding-top: 15px
+  padding-bottom: 15px
+  width: calc(100% - 16px)
+
+#content h3
+  text-decoration: underline
 
 #footer
   width: 1000px
@@ -128,10 +153,15 @@ a:hover
   margin-right: auto
   margin-top: 10px
   position: relative
-  border-top: 5px solid #EEE
+  border-top: 5px solid #111
   padding: 0
   text-align: right
   color: #EEE
+
+#footer p
+  font-weight: 300
+  margin-top: 10px
+  font-size: 1.2em
 
 #article-index
   font-size: 30px
