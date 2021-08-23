@@ -16,22 +16,22 @@ p, h1, h2, h3, h4, h5, h6
   color                 #111
 
 h1
-  font-size             2.0em
+  font-size             2.0rem
 
 h2
-  font-size             1.8em
+  font-size             1.8rem
 
 h3
-  font-size             1.5em
+  font-size             1.5rem
 
 p, li
-  font-size             1.3em
+  font-size             1.3rem
 
 p
-  line-height           1.5em
+  line-height           1.5rem
 
 li
-  line-height           1.5em
+  line-height           1.5rem
 
 a
   color                 #619CF4
@@ -74,7 +74,7 @@ a:hover
 #header-title
   display               inline
   height                64px
-  font-size             3.5em
+  font-size             3.5rem
   padding-left          10px
   user-select           none
   -webkit-user-select   none
@@ -111,7 +111,7 @@ a:hover
 
 .menu
   color: #111
-  font-size: 1.0em
+  font-size: 1.0rem
   line-height: 1.0
   text-align: right
 
@@ -151,7 +151,7 @@ a:hover
   max-width             980px
   margin                15px auto 0
   font-weight           400
-  line-height           1.5em
+  line-height           1.5rem
 
 #content h2
   color: #EEE
@@ -162,6 +162,7 @@ a:hover
   padding-top: 15px
   padding-bottom: 15px
   width: calc(100% - 16px)
+  text-transform uppercase
 
 #content h3
   text-decoration: underline
@@ -189,19 +190,20 @@ a:hover
   flex-wrap             nowrap
 
 #welcome-image
-  background-position center
-  background-repeat no-repeat
+  background-position   center
+  background-repeat     no-repeat
+  background-size       contain;
   flex 1 1 0px
   width 100%
   min-width 250px
-  height 250px
-  background-size: cover;
+  height 300px
 
 #welcome-greeting
   height                100%
   flex                  1 1 0px
   min-width             200px
   font-size             30px
+  line-height           35px
   text-align            center
   display               table-cell
   vertical-align        middle
@@ -210,8 +212,8 @@ a:hover
   margin-bottom         10px
 
 #article-index li
-  font-size 2.0em
-  line-height 1.0em
+  font-size 2.0rem
+  line-height 1.0rem
 
 #article-index
   list-style: none
@@ -327,33 +329,33 @@ a:hover
 
 @media screen and (max-width: 800px)
   #header-title
-    font-size           2.8em
+    font-size           2.8rem
 
   .menu
-    font-size           0.9em
+    font-size           0.9rem
 
   .menu li
     margin-left         8px
 
   h1
-    font-size           1.5em
+    font-size           1.5rem
 
   h2
-    font-size           1.3em
+    font-size           1.3rem
 
   h3
-    font-size           1.1em
+    font-size           1.1rem
 
   p, li
-    font-size           1.0em
-    line-height         1.2em
+    font-size           1.0rem
+    line-height         1.2rem
 
   #content h2
     padding             10px
 
   #article-index li
-    font-size           1.5em
-    line-height         1.0em
+    font-size           1.5rem
+    line-height         1.0rem
 
 @media screen and (max-width: 580px)
   .hide-on-small-displays
